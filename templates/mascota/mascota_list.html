@@ -38,4 +38,20 @@
 
 </table>
 
+<ul class="pager">
+  <li>
+    {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% else %}
+    <h1>no hay previo</h1>
+    {% endif %}
+  </li>
+  <li>
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+    {% else %}
+    <h1>No hay next</h1>
+    {% endif %}
+  </li>
+</ul>
 {% endblock %}
